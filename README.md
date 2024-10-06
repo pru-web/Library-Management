@@ -1,6 +1,7 @@
 # Library Management
 
 Application developed using Spring Boot with Microservices architecture.
+Find the project in the master branch
 
 ## Prerequisites
 
@@ -62,8 +63,8 @@ You can view the Swagger documentation for the APIs at:
 
 http://localhost:8080/swagger-ui/
 
-#F#or Sample outputs 
-Refer to the word document 
+##For Sample outputs 
+Refer to the word document [Sample Outputs Document](Certification_Project_V1_Outputs.docx).
 
 ##Note
 There are two versions of the project.
