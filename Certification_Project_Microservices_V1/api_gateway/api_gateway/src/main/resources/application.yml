@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apigateway
+  cloud:
+    gateway:
+      routes:
+        # http://localhost:8080/dummy-bookms/books
+        - id: bookmsid
+          uri: lb://BOOKMS
+          predicates:
+            - Path= /dummy-bookms/**
+          filters:
+            - RewritePath= /dummy-bookms/(?<path>.*), /$\{path}
+        # http://localhost:8080/dummy-issuems/issue/get-book
+        - id: issuemsid
+          uri: lb://ISSUEMS
+          predicates:
+            - Path= /dummy-issuems/**
+          filters:
+            - RewritePath= /dummy-issuems/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+# Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

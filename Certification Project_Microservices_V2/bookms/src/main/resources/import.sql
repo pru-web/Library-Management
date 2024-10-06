@@ -1,0 +1,2 @@
+insert into book (title, published_Date,  total_Copies, issued_Copies, author) values ('LifeOfPi', '01-Jan-2001',  10, 5, 'Yann Martel');
+insert into book (title, published_Date,  total_Copies, issued_Copies, author) values ('ItEndsWithUs', '20-feb-2018',  7, 4, 'Coleen Hover');
